@@ -4,10 +4,10 @@
 # Program:		contacts.pl
 # Author:		Micha Methven
 # Created:		Sept 19, 2013
-# Last Edited:	Sept 24, 2013
-# Purpose:		This program will operate as a digital address book
-#				allowing the user to display all, search, add, or
-#				delete contacts.
+# Last Edited:		Sept 24, 2013
+# Purpose:	This program will operate as a digital address book
+#		allowing the user to display all, search, add, or
+#		delete contacts.
 #		*********************Note:***************************
 #		For readability, subroutines are ordered alphabetical
 #		in their respective packages, subroutines use
@@ -16,9 +16,6 @@
 #		variables do so at onset for easier understanding
 #		of their use.
 #		*****************************************************
-# Invocation:	To use this program enter... 
-#				contacts.pl
-#
 ######################################################################
 
 use strict;
@@ -95,21 +92,21 @@ our @entries;   # Stores object of type Contact
 ######################################################################
 # Name:		add_contact (subroutine of Structure)
 # Purpose:	Creates and validates a new entry into the address
-#			book.
+#		book.
 ######################################################################
 
 sub add_contact
 {
 	# Declaration of subroutine's local variables
-	my $cellNum;			# Contact's cell phone number
-	my $city;				# Contact's city
-	my $first;				# Contact's first name
-	my $homeNum;			# Contact's home phone number
-	my $last;				# Contact's last name
-	my $state;				# Contact's state
-	my $street;				# Contact's street
-	my $test;				# Subroutine's test variable
-	my $zip;				# Contact's zipcode
+	my $cellNum;		# Contact's cell phone number
+	my $city;		# Contact's city
+	my $first;		# Contact's first name
+	my $homeNum;		# Contact's home phone number
+	my $last;		# Contact's last name
+	my $state;		# Contact's state
+	my $street;		# Contact's street
+	my $test;		# Subroutine's test variable
+	my $zip;		# Contact's zipcode
 
 	my $entry = new_contact Contact();	# Create new instance of Contact
 
@@ -381,11 +378,12 @@ sub contacts_display
 {
 	# Declaration of subroutine's local variables
 	my $direction;		# Holds decision - ascending or descending
-	my @order;			# Used to display order direction
+	my @order;		# Used to display order direction
 	my $selection;		# Holds decision - what to order by
-	my @sortby;			# Used to display what we are ordering by
+	my @sortby;		# Used to display what we are ordering by
 	my @sortedContacts;	# Holds list for sorted contacts
-	print ("\n********************\n");
+
+	print ("\n********************\n");
 	print ("* Display Contacts *\n");
 	print ("********************\n");
 	print ("\nIn what order should contacts be displayed?\n");
@@ -508,7 +506,7 @@ sub contact_finder
 	# Declaration of subroutine's local variables
 	my @matches;				# Returned as matching result(s)
 	my $match = $_[0];			# Holds user's specific choice
-	my $selection = $_[1];		# Holds user's choice type
+	my $selection = $_[1];			# Holds user's choice type
 
 	my $value = new_contact Contact();	# Create new instance of Contact
 
@@ -573,9 +571,9 @@ sub contact_finder
 ######################################################################
 # Name:		contact_search (subroutine of Structure)
 # Purpose:	Prompts user to enter search criteria which is then
-#			processed by the contact_finder subroutine. The results are
-#			saved to a local array which is formatted and each
-#			result accounted for.
+#		processed by the contact_finder subroutine. The results are
+#		saved to a local array which is formatted and each
+#		result accounted for.
 ######################################################################
 
 sub contact_search
@@ -633,17 +631,17 @@ $_->city, $_->state, $_->zipcode
 ######################################################################
 # Name:		delete_contact (subroutine of Structure)
 # Purpose:	Confirms user's selection for deletion and splices
-#			the selection from the array of contacts (@entries).
+#		the selection from the array of contacts (@entries).
 ######################################################################
 
 sub delete_contact
 {
 	# Declaration of subroutine's local variables
-	my $match;			# Variable for matching purposes
+	my $match;		# Variable for matching purposes
 	my $selection;		# User's selection for deletion
 	my $position = 0;	# Positional reference - foreach loop
 	my @matches;		# Array holding matches found
-	my $answer;			# User's answer to deletion confirmation
+	my $answer;		# User's answer to deletion confirmation
 
 	$match = $_[0];
 	chop $match;
@@ -816,8 +814,8 @@ return @matches;
 ######################################################################
 # Name:		deletion_prompt (subroutine of Structure)
 # Purpose:	Allows the user to delete a contact entry. The user
-#			is propmted to enter the attribute to select by and
-#			then is requested to enter attribute specifics.
+#		is propmted to enter the attribute to select by and
+#		then is requested to enter attribute specifics.
 ######################################################################
 
 sub deletion_prompt
@@ -874,8 +872,8 @@ sub error_prompt
 ######################################################################
 # Name:		load_file (subroutine of Structure)
 # Purpose:	Loads a hardcoded file and tokenizes the data using
-#			a colon	as the delimiter. It stores all contacts
-#			into a data structure for retrieval/modification.
+#		a colon	as the delimiter. It stores all contacts
+#		into a data structure for retrieval/modification.
 ######################################################################
 
 sub load_file
@@ -920,7 +918,7 @@ sub load_file
 ######################################################################
 # Name:		update_file (subroutine of Structure)
 # Purpose:	This subroutine will sort contact entries by first
-#			name and will write the results to file.
+#		name and will write the results to file.
 ######################################################################
 
 sub update_file
@@ -943,8 +941,8 @@ sub update_file
 #	**Validation subroutines of Structure**
 #
 # Purpose:	Each validation subroutine checks if the given data
-#			is in correct format. Flagging follows conventional
-#			rules, returns 0 if false.
+#		is in correct format. Flagging follows conventional
+#		rules, returns 0 if false.
 ######################################################################
 
 # Validator for first, last, and city names
@@ -1115,8 +1113,8 @@ sub new_contact
 ######################################################################
 # Name:		show_contact (subroutine of Contact)
 # Purpose:	During selection for deletion, this allows a
-#			formatted print of the chosen contact to verify
-#			if the user wants to proceed.
+#		formatted print of the chosen contact to verify
+#		if the user wants to proceed.
 ######################################################################
 
 sub show_contact
@@ -1173,7 +1171,7 @@ sub street
 ######################################################################
 # Name:		write_contact (subroutine of Contact)
 # Purpose:	Creates a local output stream and writes contact's
-#			information to file or dies with error.
+#		information to file or dies with error.
 ######################################################################
 
 sub write_contact
