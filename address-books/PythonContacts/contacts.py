@@ -1,13 +1,13 @@
 #!/usr/bin/python
 ######################################################################
 #
-# Program:		contacts.py
-# Author:		Micha Methven
-# Created:		Oct 4, 2013
+# Program:	contacts.py
+# Author:	Micha Methven
+# Created:	Oct 4, 2013
 # Last Edited:	Oct 21, 2013
-# Purpose:		This program will operate as a digital address book
-#				allowing the user to display all, search, add, modify
-#				or delete contacts.
+# Purpose:	This program will operate as a digital address book
+#		allowing the user to display all, search, add, modify
+#		or delete contacts.
 #		*********************Note:***************************
 #		1) Created using Python 2.6.6
 #		2) For readability, functions use underscore for the
@@ -15,9 +15,6 @@
 #		Functions declaring many variables do so at onset for
 #		easier understanding of their use.
 #		*****************************************************
-# Invocation:	To use this program enter... 
-#				contacts.py
-#
 ######################################################################
 
 import os
@@ -26,7 +23,7 @@ import pickle
 ######################################################################
 # Name:		Person (class)
 # Purpose:	Needed for OOP. Provides a contact's structure and
-#			allows for printing or modifying attributes.
+#		allows for printing or modifying attributes.
 ######################################################################
 
 class Person:
