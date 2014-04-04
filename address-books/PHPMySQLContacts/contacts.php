@@ -3,17 +3,17 @@
 # Program:		contacts.php
 # Author:		Micha Methven
 # Created:		Oct 23, 2013
-# Last Edited:	Nov 1, 2013
+# Last Edited:		Nov 1, 2013
 #*********************************************************************
 # Purpose:		This program will operate as a digital address
-#				book allowing the user to view all contacts,
-#				edit/remove contacts, and add contacts via web
-#				browser.
+#			book allowing the user to view all contacts,
+#			edit/remove contacts, and add contacts via web
+#			browser.
 #*********************************************************************
 # Invocation:	To use this program make sure you have WAMP
-# 				installed and running. Then simply follow the
-#				directions in the "ReadMe.txt" file. Afterwards,
-#				you may open the "contacts.php" file with WAMPSERVER.
+# 		installed and running. Then simply follow the
+#		directions in the "ReadMe.txt" file. Afterwards,
+#		you may open the "contacts.php" file with WAMPSERVER.
 ######################################################################
 -->
 <html>
